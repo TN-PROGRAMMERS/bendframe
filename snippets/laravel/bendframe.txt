@@ -1,0 +1,123 @@
+php :
+--------------------------------
+
+
+error:
+------
+problem : I have code like this to connect my server database:
+
+    <?php
+
+    $con = mysqli_connect("", "username", "password", "databasename");
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    }
+
+solution : 
+
+mysqli_connect("","username" ,"password","databasename");
+    
+    advice : 
+    - Server name cannot be NULL
+    -use loaclhost for server name(In Loacl)
+    
+    code:
+        <?php
+            $con = mysqli_connect("localhost","username" ,"password","databasename");
+
+            if (mysqli_connect_errno())
+            {
+                echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            }
+        ?>
+
+    Or can use MySQLi Procedural
+
+        <?php
+            $servername = "localhost";
+            $username = "username";
+            $password = "password";
+
+            // Create connection
+            $con = mysqli_connect($servername, $username, $password);
+
+            // Check connection
+            if (!$con) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+            echo "Connected successfully";
+        ?>
+
+---------------------------------------------------
+laravel
+-------
+    Converting multiple same name into one single name using laravel
+
+problem : I am trying to fetch the user name instead of multi user name but unfortunately, the single user name is not showing.
+
+solution:
+
+    advice: 
+    -Use groupBy() on your query with the user_id
+
+    code:
+
+        $data = [
+              "hourlogs"  => $hourLog->whereBetween('date', $date)
+                                      ->orderBy('date', 'desc')
+                                      ->orderBy('start_time', 'asc')
+                                      ->groupBy('user_id')
+                                      ->get(),
+              "date"=> $date,
+                  ];
+   
+ 
+   -This will give you a collection with unique user, containing the related models
+
+------------------------------------------------------------------------------------------
+laravel
+-------
+
+problem : i have an input file for images with a controller laraval function, I just want to test it but it keeps returning null
+
+    HTML:
+
+        <div class="form-group">
+          <label>{{'Ajouter un image'}} </label>
+          <input type="file" enctype="multipart/form-data" class="form-control" name="image" required>
+        </div>
+
+    laraval:
+
+        public function store(Request $request)
+        {
+           dd(request()->file('image'));
+        }
+
+
+solution:
+    this is the perfect contcroller function to input file images
+
+    code:
+
+        public function store(Request $request)
+        {
+            dd($request->file('image'));
+        }
+
+    Or you can use this HTML form with this function
+    
+    HTML:
+
+        <form method="POST" enctype="multipart/form-data">
+           <input type="file" class="form-control" name="image" required>    
+        </form>
+
+    function:
+
+        public function store(Request $request)
+        {
+           dd(request()->file('image'));
+        }
+
+-------------------------------------------------------------------------------
