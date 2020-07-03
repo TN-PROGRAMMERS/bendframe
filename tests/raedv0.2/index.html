@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="icon" href="./src/img/01.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="./src/css/main.css">
+  <title>Bendframe</title>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">Bendframe</div>
+    <label for="btn" class="icon">
+      <span class="fa fa-bars"></span>
+    </label>
+    <input type="checkbox" id="btn">
+    <ul>
+      <li>
+        <label for="btn-1" class="show">Home</label>
+        <a href="#" class="Main">Home</a>
+        <input type="checkbox" id="btn-1">
+      </li>
+      <li>
+        <label for="btn-2" class="show">Documentation</label>
+        <a href="#" class="Main">Documentation</a>
+        <input type="checkbox" id="btn-2">
+      </li>
+      <li>
+        <label for="btn-6" class="show">About Us</label>
+        <a href="#" class="Main">About Us</a>
+        <input type="checkbox" id="btn-6">
+      </li>
+      <li>
+        <label for="btn-7" class="show">Contact Us</label>
+        <a href="#" class="Main">Contact Us</a>
+        <input type="checkbox" id="btn-7">
+      </li>
+    </ul>
+  </nav>
+  <div class="SideNav">
+    <nav>
+      <!--This is a side Nav needs design and some responsive modifications-->
+      <!--Just Modify it in css it has unique Class name-->
+     <!--  <li>
+        <label for="btn-3" class="show">Libraries</label>
+        <a href="#" class="Main">Libraries</a>
+        <input type="checkbox" id="btn-3">
+        <ul>
+          <li>
+            <a href="#" class="Libraries">Nodejs</a>
+          </li>
+          <li>
+            <a href="#" class="Libraries">Django</a>
+          </li>
+          <li>
+            <a href="#" class="Libraries">Ruby</a>
+          </li>
+          <li>
+            <a href="#" class="Libraries">Laravel</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <label for="btn-5" class="show">Contribute</label>
+        <a href="#" class="Main">Contribute</a>
+        <input type="checkbox" id="btn-5">
+        <ul>
+          <li><a href="#" class="Contribute">My contributions</a></li>
+          <li><a href="#" class="Contribute">Send Contribution</a></li>
+        </ul>
+      </li>-->
+    </nav>
+  </div>
+  <div class="container Head">
+    <main>
+      <div class="container A">
+        <div class="row">
+          <div class="col-6">
+            <h1>Bendframe</h1>
+          </div>
+        </div>
+        <div class="row">
+          <br> <br>
+        </div>
+        <div class="row justify-content-end">
+          <div class="col-5 order-md-1 text-center text-md-left pr-md-5">
+            <img src="./src/img/02.png" alt="logo" style=" max-width: 100%; height: auto;">
+          </div>
+          <div class="col-7 order-md-1 text-center text-md-left pr-md-7">
+            <h3 class="mb-3">Make effecient WebServers with Bendframe</h3>
+            <p class="lead mb-4">
+              Build your server quickly with Bendframe a BackEnd open source library.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <br> <br> <br>
+    <div>
+      <!--Part for contribution-->>
+      <div class="row contibute">
+
+      </div>
+      <div class="container masthead-followup Installation">
+        <div class="row mb-5 pb-md-4 align-items-center">
+          <div class="col-md-5 Installation">
+            <div class="masthead-followup-icon d-inline-block mb-2 IMAGE">
+              <img src="./src/img/03.png" alt="CDN" style=" max-width: 40%; height: auto;">
+            </div>
+            <h3>Bendframe Installation</h3>
+            <p class="lead font-weight-normal">
+              Include Benframe Libraries In your Code through BendFrameCDN or Install its source into your Computer
+            </p>
+          </div>
+          <div class="col-md-7 pl-md-5">
+            <pre>
+                <!--Here Write the Code of Installation or the link or whatever-->
+                  <code class="language-html" data-lang="html"></code>
+                </pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+
+  </footer>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script>
+    $('.icon').click(function () {
+      $('span').toggleClass("cancel");
+    });
+  </script>
+</body>
+
+</html>
