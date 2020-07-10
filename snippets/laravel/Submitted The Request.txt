@@ -1,0 +1,35 @@
+case :
+   On my website, users can display posts created by other users. However, I
+   have 2 select boxes, one for ordering by name or date and the other is 
+  ordering by category. The way I have done it is incorrect and I am aware
+   of that. The simple reason for this is that I don't know how to make an
+   if check on which form submitted the request.
+---------------------------------------------------------------------------
+
+solution:
+---------
+
+  code:
+  -----
+  
+    HTML:
+
+      //Category form
+      <input type="hidden" name="formName" value="category">
+
+      //Sort form
+      <input type="hidden" name="formName" value="sort">
+      
+   PHP - LARAVEL:
+   
+      //in the controller:
+     if($request['formName'] == 'category') //request submitted by 'category'
+       //then do this...
+     elseif($request['formName'] == 'sort')  //request submitted by 'sort'
+       //then do this...
+ --------------------------------------------------------------------
+ Advice:
+   Just be careful not to put too much different code in both conditionals.
+   If you find yourself having two entirely different functions, create an
+   action for each form.
+   
